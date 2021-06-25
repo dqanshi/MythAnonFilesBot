@@ -37,10 +37,10 @@ bot = Client(
 
 
 START_TEXT = """
-__Hᴇʟʟᴏ Dᴇᴀʀ I'ᴍ__ **AɴᴏɴFɪʟᴇsBᴏᴛ** 😎 \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**
+Hᴇʟʟᴏ User I'ᴍ <code>MythAɴᴏɴFɪʟᴇsBᴏᴛ</code> 😀 \n\n<code>I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs</code>\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ : **@Kai84_Space**
 """
 HELP_TEXT = """
-**AɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**
+**MythAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai84_Space**
 """
 ABOUT_TEXT = """
 - **Bot :** `AnonFilesBot`
@@ -140,11 +140,11 @@ async def upload(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/AvishkarPatil).",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Developer](https://telegram.me/ConKai84_bot).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
-    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 😈")
+    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 📥😘")
     now = time.time()
     sed = await bot.download_media(
                 message, DOWNLOAD,
