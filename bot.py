@@ -130,7 +130,9 @@ async def upload(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ My Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Kai84 Space", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Anime Troop", url=f"https://t.me/{Config.UPDATES_CHANNEL_2}")
+                            InlineKeyboardButton("Movies Bank", url=f"https://t.me/{Config.UPDATES_CHANNEL_3}")
                         ]
                     ]
                 ),
