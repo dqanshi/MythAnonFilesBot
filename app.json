@@ -1,14 +1,14 @@
 {
-    "name": "AnonFilesBot [ Avishkar Patil ]",
+    "name": "MythAnonFilesBot [ KAi84_Space ]",
     "description": "A telegram bot that can upload telegram media files to anonfiles.com maintained by AvoshkarPatil",
-    "logo": "https://i.ibb.co/zZVrKKL/thumb.jpg",
+    "logo": "https://telegra.ph/file/4b029b680e727b2d9974a.png",
     "keywords": [
         "Anonfiles",
         "Uploader",
         "Telegram Bot"
     ],
-    "website": "https://avipatilweb.me",
-    "repository": "https://github.com/DragonPower84/AnonFliesBot",
+    "website": "https://telegram.dog/Kai84_Space",
+    "repository": "https://github.com/DragonPower84/MythAnonFliesBot",
     "success_url": "https://telegram.me/kai84_space",
     "env": {
         "BOT_TOKEN": {
@@ -28,11 +28,11 @@
             "value": ""
         },
         "UPDATES_CHANNEL_2": {
-            "description": "Your Update Channel 2 Username without '@'",
+            "description": "Your Update Channel 2 Username without '@' or Just Put The 'UPDATE_CHANNEL' Value",
             "value": ""
         },
         "UPDATES_CHANNEL_3": {
-            "description": "Your Update Channel 3 Username without '@'",
+            "description": "Your Update Channel 3 Username without '@' or Just Put The 'UPDATE_CHANNEL' Value",
             "value": ""
         }
     },
