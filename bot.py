@@ -1,4 +1,4 @@
-#    Copyright (C) 2021 - Avishkar Patil | @AvishkarPatil
+#    Copyright (C) 2021 - DragonPower84 | @DragonPower84
 
 
 import os
@@ -44,8 +44,8 @@ HELP_TEXT = """
 """
 ABOUT_TEXT = """
 - **Bot :** `AnonFilesBot`
-- **Creator :** [AvishkarPatil](https://telegram.me/AvishkarPatil)
-- **Source :** [Click here](https://github.com/avipatilpro/AnonFilesBot)
+- **Creator :** [Kai84](https://telegram.Dog/Kai84_Space)
+- **Source :** [Click here](https://github.com/DragonPower84/AnonFilesBot)
 - **Language :** [Python3](https://python.org)
 - **Server :** [Heroku](https://heroku.com)
 
@@ -118,7 +118,7 @@ async def upload(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.chat.id,
-                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ! Cᴏɴᴛᴀᴄᴛ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/AvishkarPatil).",
+                    text="**MadarChod, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ My Bot! Cᴏɴᴛᴀᴄᴛ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.Dog/ConKai84_Bot).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -126,11 +126,11 @@ async def upload(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ 🏃‍♂**",
+                text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ 🏃\nor Fuck Off!**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Jᴏɪɴ My Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -140,17 +140,17 @@ async def upload(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Developer](https://telegram.me/ConKai84_bot).",
+                text="**System Got Error 404!\nIf Errors Don't Stop,Then Report to **[Developer](https://telegram.me/ConKai84_bot)**",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
-    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 📥😘")
+    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ {uname} FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 📥😘")
     now = time.time()
     sed = await bot.download_media(
                 message, DOWNLOAD,
           progress=progress,
           progress_args=(
-            "**Uᴘʟᴏᴀᴅ Pʀᴏᴄᴇss Sᴛᴀʀᴇᴅ Wᴀɪᴛ ᴀɴᴅ Wᴀᴛᴄʜ Mᴀɢɪᴄ**\n**Iᴛs Tᴀᴋᴇ ᴛɪᴍᴇ Aᴄᴄᴏʀᴅɪɴɢ Yᴏᴜʀ Fɪʟᴇs Sɪᴢᴇ** \n\n**ᴇᴛᴀ:** ", 
+            "**Uᴘʟᴏᴀᴅing Pʀᴏᴄᴇss Sᴛᴀʀᴇᴅ Wᴀɪᴛ A Little** {uname} \n`Fact: Files Tᴀᴋᴇ ᴛɪᴍᴇ Aᴄᴄᴏʀᴅɪɴɢ Yᴏᴜʀ Fɪʟᴇs Sɪᴢᴇ` \n\n**ᴇᴛᴀ:** ", 
             m,
             now
             )
@@ -207,5 +207,5 @@ async def download(url):
         
         
 bot.start()
-print("AnonFilesBot Is Started!,  if Have Any Problems contact @AvishkarPatil")
+print("AnonFilesBot Is Started!,  if Have Any Problems contact @ConKai84_Bot")
 idle()
