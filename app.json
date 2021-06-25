@@ -8,8 +8,8 @@
         "Telegram Bot"
     ],
     "website": "https://avipatilweb.me",
-    "repository": "https://github.com/avipatilpro/AnonFliesBot",
-    "success_url": "https://telegram.me/AvishkarPatil",
+    "repository": "https://github.com/DragonPower84/AnonFliesBot",
+    "success_url": "https://telegram.me/kai84_space",
     "env": {
         "BOT_TOKEN": {
             "description": "Your Telegram Bot Token from @BotFather",
@@ -25,6 +25,14 @@
         },
         "UPDATES_CHANNEL": {
             "description": "Your Update Channel Username without '@'",
+            "value": ""
+        },
+        "UPDATES_CHANNEL_2": {
+            "description": "Your Update Channel 2 Username without '@'",
+            "value": ""
+        },
+        "UPDATES_CHANNEL_3": {
+            "description": "Your Update Channel 3 Username without '@'",
             "value": ""
         }
     },
