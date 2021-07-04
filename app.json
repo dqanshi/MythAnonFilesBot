@@ -26,14 +26,6 @@
         "UPDATES_CHANNEL": {
             "description": "Your Update Channel Username without '@'",
             "value": ""
-        },
-        "UPDATES_CHANNEL_2": {
-            "description": "Your Update Channel 2 Username without '@' or Just Put The 'UPDATE_CHANNEL' Value",
-            "value": ""
-        },
-        "UPDATES_CHANNEL_3": {
-            "description": "Your Update Channel 3 Username without '@' or Just Put The 'UPDATE_CHANNEL' Value",
-            "value": ""
         }
     },
     "addons": [],
