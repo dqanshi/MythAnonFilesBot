@@ -45,7 +45,7 @@ HELP_TEXT = """
 ABOUT_TEXT = """
 - **Bot :** `AnonFilesBot`
 - **Creator :** [Kai84](https://telegram.Dog/Kai84_Space)
-- **Source :** [Click here](https://github.com/DragonPower84/AnonFilesBot)
+- **Source :** [Click here](https://github.com/DragonPower84/MythAnonFilesBot)
 - **Language :** [Python3](https://python.org)
 - **Server :** [Heroku](https://heroku.com)
 
@@ -131,8 +131,6 @@ async def upload(client, message):
                     [
                         [
                             InlineKeyboardButton("Kai84 Space", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
-                            InlineKeyboardButton("Anime Troop", url=f"https://t.me/{Config.UPDATES_CHANNEL_2}")
-                            InlineKeyboardButton("Movies Bank", url=f"https://t.me/{Config.UPDATES_CHANNEL_3}")
                         ]
                     ]
                 ),
