@@ -39,5 +39,5 @@ python3 bot.py
 
 ## Credits
 
-- [DragonPower84](https://github.com/DragonPower84)
+- <a href="https://github/DragonPower84"><img src="https://img.shields.io/badge/-DragonPower84-black?style=flat&logo=github" height="25px"></a>
 - <a href="https://t.me/Kai84_Space"><img src="https://img.shields.io/badge/-Telegram-blue?style=social&logo=telegram" height="25px"></a>
