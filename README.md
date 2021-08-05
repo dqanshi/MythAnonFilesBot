@@ -40,4 +40,4 @@ python3 bot.py
 ## Credits
 
 - [DragonPower84](https://github.com/DragonPower84)
-- [https://img.shields.io/badge/-Join%20Us%20At%20Telegram-blue?style=social&logo=telegram](https://t.me/Kai84_Space)
+- <a href="https://t.me/Kai84_Space"><img src="https://img.shields.io/badge/-Join%20Us%20At%20Telegram-blue?style=social&logo=telegram" height="30px"></a>
