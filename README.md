@@ -17,15 +17,15 @@
 ### Deploy on Heroku :
 
 <a href="https://heroku.com/deploy?template=https://github.com/DragonPower84/MythAnonFilesBot/tree/main">
-     <img height="30px" src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku">
+     <img height="30px" src="https://img.shields.io/badge/-Deploy%20To%20Heroku-orange?style=for-the-badge&logo=heroku">
   </a>
 
 
 ### Deploy on VPS :
 
 ```py
-git clone https://github.com/avipatilpro/AnonFilesBot
-cd AnonFilesBot
+git clone https://github.com/DragonPower84/MythAnonFilesBot
+cd MythAnonFilesBot
 pip3 install -r requirements.txt
 # <Create Variables appropriately>
 python3 bot.py
@@ -39,4 +39,5 @@ python3 bot.py
 
 ## Credits
 
-- [Avishkar Patil](https://github.com/avipatilpro)
+- [DragonPower84](https://github.com/DragonPower84)
+- [https://img.shields.io/badge/-Join%20Us%20At%20Telegram-blue?style=social&logo=telegram](https://t.me/Kai84_Space)
