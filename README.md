@@ -1,6 +1,6 @@
-<h1 align='center'>✯ AnonFilesBot ✯</h1>
+<h1 align='center'>✯ MythAnonFilesBot ✯</h1>
 
-<h4 align='center'> Telegram Files to AnonFiles Upload Bot It will Also Give Direct Download Link </h4>
+<h4 align='center'> Telegram Files to AnonFiles Upload Bot It will Also Give Direct Download Link By Kai84 </h4>
 
 ---
 
@@ -40,4 +40,4 @@ python3 bot.py
 ## Credits
 
 - [DragonPower84](https://github.com/DragonPower84)
-- <a href="https://t.me/Kai84_Space"><img src="https://img.shields.io/badge/-Telegram-blue?style=social&logo=telegram" height="10px"></a>
+- <a href="https://t.me/Kai84_Space"><img src="https://img.shields.io/badge/-Telegram-blue?style=social&logo=telegram" height="25px"></a>
