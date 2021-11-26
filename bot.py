@@ -140,17 +140,17 @@ async def upload(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**System Got Error 404!\nIf Errors Don't Stop,Then Report to **[Developer](https://telegram.me/ConKai84_bot)**",
+                text="**System Got Error 404!\nIf Errors Don't Stop,Then Report to **[Developer](https://t.me/ConKai84_bot)**",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
-    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ {uname} FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 📥😘")
+    m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** 📥😘")
     now = time.time()
     sed = await bot.download_media(
                 message, DOWNLOAD,
           progress=progress,
           progress_args=(
-            "**Uᴘʟᴏᴀᴅing Pʀᴏᴄᴇss Sᴛᴀʀᴇᴅ Wᴀɪᴛ A Little** {uname} \n`Fact: Files Tᴀᴋᴇ ᴛɪᴍᴇ Aᴄᴄᴏʀᴅɪɴɢ Yᴏᴜʀ Fɪʟᴇs Sɪᴢᴇ` \n\n**ᴇᴛᴀ:** ", 
+            "**Uᴘʟᴏᴀᴅing Pʀᴏᴄᴇss Sᴛᴀʀᴇᴅ Wᴀɪᴛ A Little**\n\n`Fact: Files Tᴀᴋᴇ ᴛɪᴍᴇ Aᴄᴄᴏʀᴅɪɴɢ Yᴏᴜʀ Fɪʟᴇs Sɪᴢᴇ`", 
             m,
             now
             )
@@ -169,20 +169,46 @@ async def upload(client, message):
 
 **📥Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ:** `{text['data']['file']['url']['full']}`
 
-🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil**"""
+🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4**"""
         btn = InlineKeyboardMarkup(
                                 [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
-        await m.edit(output, reply_markup=btn)
+        await msg.edit(output, reply_markup=btn)
         os.remove(sed)
     except Exception:
         await m.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ, Mᴀʏʙᴇ Tɪᴍᴇ Oᴜᴛ Dᴜᴇ Tᴏ Lᴀʀɢᴇ Fɪʟᴇ Sɪᴢᴇ!__")
         return
       
+@bot.on_message(filters.regex(pattern="https://") & filters.private & ~filters.edited)
+async def kl(client, message):
+    msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
+    links = message.text
+    capt = "Uploaded By @Kai_8_4 Bot")
+    try:
+         await msg.edit(__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
+         felname = await download (links)
+         callapi = requests.post("https://api.anonfiles.com/upload", files=files)
+         text = callapi.json()
+         sendup = """
+<u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ AɴᴏɴFɪʟᴇs**</u>
+
+**📂 Fɪʟᴇ Nᴀᴍᴇ:** {text['data']['file']['metadata']['name']}
+
+**📦 Fɪʟᴇ Sɪᴢᴇ:** {text['data']['file']['metadata']['size']['readable']}
+
+**📥Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ:** `{text['data']['file']['url']['full']}`
+
+**🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4**"""
+         btn = InlineKeyboardMarkup(
+                                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
+        await msg.edit(output, reply_markup=btn)
+        os.remove(felname)
+    
+
 @bot.on_message(filters.regex(pattern="https://cdn-") & filters.private & ~filters.edited)
 async def url(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     lenk = message.text
-    cap = "© @AvishkarPatil"
+    cap = "Uploaded By @Kai_8_4 Bot"
     thumb = "./thumb.jpg"
     try:
          await msg.edit("**Bɪɢ Fɪʟᴇs Wɪʟʟ Tᴀᴋᴇ Mᴏʀᴇ Tɪᴍᴇ, Dᴏɴ'ᴛ Pᴀɴɪᴄ!**")
