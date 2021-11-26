@@ -44,12 +44,12 @@ HELP_TEXT = """
 """
 ABOUT_TEXT = """
 - **Bot :** `AnonFilesBot`
-- **Creator :** [Kai84](https://telegram.Dog/Kai84_Space)
+- **Creator :** [Kai84](https://t.me/Kai84_Space)
 - **Source :** [Click here](https://github.com/DragonPower84/MythAnonFilesBot)
 - **Language :** [Python3](https://python.org)
 - **Server :** [Heroku](https://heroku.com)
 
-__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @AvishkarPatil
+__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
@@ -182,7 +182,6 @@ async def upload(client, message):
 async def kl(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     links = message.text
-    capt = "Uploaded By @Kai_8_4 Bot")
     try:
          await msg.edit(__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
          felname = await download (links)
@@ -202,23 +201,8 @@ async def kl(client, message):
                                 [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
         await msg.edit(output, reply_markup=btn)
         os.remove(felname)
-    
-
-@bot.on_message(filters.regex(pattern="https://cdn-") & filters.private & ~filters.edited)
-async def url(client, message):
-    msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
-    lenk = message.text
-    cap = "Uploaded By @Kai_8_4 Bot"
-    thumb = "./thumb.jpg"
-    try:
-         await msg.edit("**Bɪɢ Fɪʟᴇs Wɪʟʟ Tᴀᴋᴇ Mᴏʀᴇ Tɪᴍᴇ, Dᴏɴ'ᴛ Pᴀɴɪᴄ!**")
-         filename = await download(lenk)
-         await msg.edit("Uploading File To Telegram...")
-         await message.reply_document(filename, caption=cap, thumb=thumb)
-         await msg.delete()
-         os.remove(filename)
     except Exception:
-        await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ, Mᴀʏʙᴇ Tɪᴍᴇ Oᴜᴛ Dᴜᴇ Tᴏ Lᴀʀɢᴇ Fɪʟᴇ Sɪᴢᴇ!__")
+        await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ__")
         
 async def download(url):
     ext = url.split(".")[-1]
