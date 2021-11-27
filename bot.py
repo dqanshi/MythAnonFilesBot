@@ -183,7 +183,7 @@ async def kl(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     links = message.text
     try:
-         await msg.edit(__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
+         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
          felname = await download (links)
          callapi = requests.post("https://api.anonfiles.com/upload", files=files)
          text = callapi.json()
@@ -199,7 +199,7 @@ async def kl(client, message):
 **🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4**"""
          btn = InlineKeyboardMarkup(
                                 [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
-        await msg.edit(output, reply_markup=btn)
+        await msg.edit(sendup, reply_markup=btn)
         os.remove(felname)
     except Exception:
         await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ__")
