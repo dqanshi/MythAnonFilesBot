@@ -183,11 +183,11 @@ async def kl(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     links = message.text
     try:
-         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
-         felname = await download (links)
-         callapi = requests.post("https://api.anonfiles.com/upload", files=files)
-         text = callapi.json()
-         sendup = """
+        await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
+        filename = await download(links)
+        callapi = requests.post("https://api.anonfiles.com/upload", files=filename)
+        text = callapi.json()
+        sendup = """
 <u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ AɴᴏɴFɪʟᴇs**</u>
 
 **📂 Fɪʟᴇ Nᴀᴍᴇ:** {text['data']['file']['metadata']['name']}
@@ -196,11 +196,10 @@ async def kl(client, message):
 
 **📥Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ:** `{text['data']['file']['url']['full']}`
 
-**🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4**"""
-         btn = InlineKeyboardMarkup(
-                                [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
+**🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ : **@Kai_8_4**"""
+        btn = InlineKeyboardMarkup([[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
         await msg.edit(sendup, reply_markup=btn)
-        os.remove(felname)
+        os.remove(filename)
     except Exception:
         await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ__")
         
@@ -213,7 +212,7 @@ async def download(url):
                 f = await aiofiles.open(filename, mode='wb')
                 await f.write(await resp.read())
                 await f.close()
-    return filename
+        return filename
         
         
 bot.start()
