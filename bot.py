@@ -184,8 +184,8 @@ async def kl(client, message):
     lenk = message.text
     try:
         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
-        filess = await download(lenk)
-        callapi = requests.post("https://api.anonfiles.com/upload", files=filess)
+        filename = await download(lenk)
+        callapi = requests.post("https://api.anonfiles.com/upload", files=filename)
         text = callapi.json()
         sendup = f"""
 <u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ AɴᴏɴFɪʟᴇs**</u>
@@ -204,6 +204,18 @@ async def kl(client, message):
         await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ__")
         
         
+async def download(url):
+    ext = url.split(".")[-1]
+    filename = str(randint(1000, 9999)) + "." + ext
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            if resp.status == 200:
+                f = await aiofiles.open(filename, mode='wb')
+                await f.write(await resp.read())
+                await f.close()
+    return filename
+
+
 bot.start()
 print("AnonFilesBot Is Started!,  if Have Any Problems contact @ConKai84_Bot")
 idle()
