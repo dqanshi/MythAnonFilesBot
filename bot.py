@@ -203,17 +203,6 @@ async def kl(client, message):
     except Exception:
         await msg.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ__")
         
-async def download(url):
-    ext = url.split(".")[-1]
-    filename = str(randint(1000, 9999)) + "." + ext
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            if resp.status == 200:
-                f = await aiofiles.open(filename, mode='wb')
-                await f.write(await resp.read())
-                await f.close()
-        return filename
-        
         
 bot.start()
 print("AnonFilesBot Is Started!,  if Have Any Problems contact @ConKai84_Bot")
