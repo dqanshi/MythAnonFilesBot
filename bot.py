@@ -184,8 +184,8 @@ async def kl(client, message):
     links = message.text
     try:
         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
-        os.system(f"wget -nv --content-disposition '{links}' -P {DOWNLOAD}")
-        files = {'file': open(DOWNLOAD, 'rb')}
+        dls = os.system(f"wget -nv --content-disposition '{links}' -P {DOWNLOAD}")
+        files = {'file': open(dls, 'rb')}
         callapi = requests.post("https://api.anonfiles.com/upload", files=files)
         text = callapi.json()
         sendup = """
