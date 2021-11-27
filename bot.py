@@ -182,13 +182,15 @@ async def upload(client, message):
 async def kl(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     links = message.text
+    linkv = links.split(" | ")[1]
     try:
+        ext = links.split(" | ")[-1]
         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
-        dls = os.system(f"wget -nv --content-disposition '{links}' -P {DOWNLOAD}")
-        files = {'file': open(dls, 'rb')}
+        files = os.path.join(DOWNLOAD, ext)
+        os.system(f"wget -nv '{links}' -O {files}")
         callapi = requests.post("https://api.anonfiles.com/upload", files=files)
         text = callapi.json()
-        sendup = """
+        sendup = f"""
 <u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ AɴᴏɴFɪʟᴇs**</u>
 
 **📂 Fɪʟᴇ Nᴀᴍᴇ:** {text['data']['file']['metadata']['name']}
