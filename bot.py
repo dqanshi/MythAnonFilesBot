@@ -181,10 +181,10 @@ async def upload(client, message):
 @bot.on_message(filters.regex(pattern="https://") & filters.private & ~filters.edited)
 async def kl(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
-    links = message.text
-    linkv = links.split(" | ")[1]
+    links = (message.text).split(" | ")
+    linkv = links[1]
     try:
-        ext = links.split(" | ")[-1]
+        ext = links[-1]
         await msg.edit("__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚑𝚎 𝙵𝚒𝚕𝚎 𝚏𝚘𝚛 𝚄 𝙰𝚗𝚍 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝙰𝚗𝚘𝚗𝙵𝚒𝚕𝚎__")
         files = os.path.join(DOWNLOAD, ext)
         os.system(f"wget -nv '{links}' -O {files}")
