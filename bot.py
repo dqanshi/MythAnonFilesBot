@@ -44,12 +44,12 @@ HELP_TEXT = """
 """
 ABOUT_TEXT = """
 - **Bot :** `AnonFilesBot`
-- **Creator :** [Kai84](https://t.me/Kai84_Space)
-- **Source :** [Click here](https://github.com/DragonPower84/MythAnonFilesBot)
+- **Creator :** [dev](https://t.me/am_Dq_fan)
+- **Source :** [Click here](https://github.com/DQAnshi)
 - **Language :** [Python3](https://python.org)
 - **Server :** [Heroku](https://heroku.com)
 
-__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @Kai_8_4
+__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @am_Dq_fan
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
